@@ -47,7 +47,6 @@ export default function Create() {
           onChange={(e) => setTitle(e.target.value)}
           label="Note Title"
           variant="outlined"
-          color="secondary"
           fullWidth
           required
           error={titleError}
@@ -61,7 +60,6 @@ export default function Create() {
           onChange={(e) => setDetails(e.target.value)}
           label="Details"
           variant="outlined"
-          color="secondary"
           multiline
           minRows={4}
           fullWidth
@@ -83,14 +81,14 @@ export default function Create() {
         >
           <FormLabel>Note Category</FormLabel>
           <RadioGroup value={category} onChange={(e) => setCategory(e.target.value)}>
-            <FormControlLabel value="money" control={<Radio color="secondary" />} label="Money" />
-            <FormControlLabel value="todos" control={<Radio color="secondary" />} label="Todos" />
-            <FormControlLabel value="reminders" control={<Radio color="secondary" />} label="Reminders" />
-            <FormControlLabel value="work" control={<Radio color="secondary" />} label="Work" />
+            <FormControlLabel value="money" control={<Radio />} label="Money" />
+            <FormControlLabel value="todos" control={<Radio />} label="Todos" />
+            <FormControlLabel value="reminders" control={<Radio />} label="Reminders" />
+            <FormControlLabel value="work" control={<Radio />} label="Work" />
           </RadioGroup>
         </FormControl>
 
-        <Button type="submit" color="secondary" variant="contained" endIcon={<KeyboardArrowRightIcon />} sx={{}}>
+        <Button type="submit" variant="contained" endIcon={<KeyboardArrowRightIcon />} sx={{}}>
           Submit
         </Button>
       </Box>
