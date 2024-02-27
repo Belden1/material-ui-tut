@@ -50,7 +50,9 @@ const RootLayout = () => {
         }}
       >
         <Box>
-          <Typography variant="h5">Ninja Notes</Typography>
+          <Typography variant="h5" padding={2}>
+            Ninja Notes
+          </Typography>
         </Box>
 
         {/* list / links */}
@@ -71,7 +73,7 @@ const RootLayout = () => {
           ))}
         </List>
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1 }}>
+      <Box component="main" padding={3} sx={{ flexGrow: 1 }}>
         <Outlet />
       </Box>
     </div>
