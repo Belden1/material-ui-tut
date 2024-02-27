@@ -8,6 +8,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { AddCircleOutlineOutlined, SubjectOutlined } from '@mui/icons-material';
 import { ListItemButton } from '@mui/material';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
 
 const drawerWidth = 240;
 
@@ -36,6 +38,11 @@ const RootLayout = () => {
       }}
     >
       {/* app bar */}
+      <AppBar sx={{ width: `calc(100% - ${drawerWidth}px)` }}>
+        <Toolbar>
+          <Typography>Welcome to the ninja website</Typography>
+        </Toolbar>
+      </AppBar>
 
       {/* side drawer */}
       <Drawer
@@ -74,7 +81,9 @@ const RootLayout = () => {
         </List>
       </Drawer>
       <Box component="main" padding={3} sx={{ flexGrow: 1 }}>
-        <Outlet />
+        <Box sx={{}}>
+          <Outlet />
+        </Box>
       </Box>
     </div>
   );
