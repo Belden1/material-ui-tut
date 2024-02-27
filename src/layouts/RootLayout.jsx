@@ -7,9 +7,10 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { AddCircleOutlineOutlined, SubjectOutlined } from '@mui/icons-material';
-import { ListItemButton } from '@mui/material';
+import { Divider, ListItemButton } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
+import { format } from 'date-fns';
 
 const drawerWidth = 240;
 
@@ -31,20 +32,13 @@ const RootLayout = () => {
   ];
 
   return (
-    <div
-      className="root-layout"
-      style={{
-        display: 'flex'
-      }}
-    >
-      {/* app bar */}
-      <AppBar sx={{ width: `calc(100% - ${drawerWidth}px)` }}>
+    <Box className="root-layout" sx={{ display: 'flex' }}>
+      <AppBar elevation={0} sx={{ width: `calc(100% - ${drawerWidth}px)` }}>
         <Toolbar>
-          <Typography>Welcome to the ninja website</Typography>
+          <Typography sx={{ flexGrow: 1 }}>Today is the {format(new Date(), 'do MMMM y')}</Typography>
+          <Typography>Mario</Typography>
         </Toolbar>
       </AppBar>
-
-      {/* side drawer */}
       <Drawer
         variant="permanent"
         anchor="left"
@@ -61,9 +55,7 @@ const RootLayout = () => {
             Ninja Notes
           </Typography>
         </Box>
-
-        {/* list / links */}
-
+        <Divider />
         <List>
           {menuItems.map((item) => (
             <ListItem
@@ -81,11 +73,10 @@ const RootLayout = () => {
         </List>
       </Drawer>
       <Box component="main" padding={3} sx={{ flexGrow: 1 }}>
-        <Box sx={{}}>
-          <Outlet />
-        </Box>
+        <Toolbar />
+        <Outlet />
       </Box>
-    </div>
+    </Box>
   );
 };
 
