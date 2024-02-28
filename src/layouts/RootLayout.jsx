@@ -11,6 +11,7 @@ import { Divider, ListItemButton } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { format } from 'date-fns';
+import Avatar from '@mui/material/Avatar';
 
 const drawerWidth = 240;
 
@@ -37,6 +38,7 @@ const RootLayout = () => {
         <Toolbar>
           <Typography sx={{ flexGrow: 1 }}>Today is the {format(new Date(), 'do MMMM y')}</Typography>
           <Typography>Mario</Typography>
+          <Avatar src="/mario-av.png" alt="Mario" sx={{ marginLeft: 2 }} />
         </Toolbar>
       </AppBar>
       <Drawer
