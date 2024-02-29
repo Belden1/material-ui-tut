@@ -35,7 +35,7 @@ export default function NoteCard({ note, handleDelete }) {
             </IconButton>
           }
           title={note.title}
-          subheader={note.category}
+          subheader={note.category.charAt(0).toUpperCase() + note.category.slice(1)}
         />
         <CardContent>
           <Typography variant="body2" color="textSecondary">
