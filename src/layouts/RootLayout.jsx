@@ -1,17 +1,7 @@
-import { Outlet, NavLink, useNavigate, useLocation } from 'react-router-dom';
-import Drawer from '@mui/material/Drawer';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
+import { Outlet, useNavigate, useLocation } from 'react-router-dom';
+import { AppBar, Avatar, Box, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material';
 import { AddCircleOutlineOutlined, SubjectOutlined } from '@mui/icons-material';
-import { Divider, ListItemButton } from '@mui/material';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
 import { format } from 'date-fns';
-import Avatar from '@mui/material/Avatar';
 
 const drawerWidth = 240;
 

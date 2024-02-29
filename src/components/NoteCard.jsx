@@ -1,10 +1,5 @@
 import React from 'react';
-import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import { Avatar, IconButton, Typography } from '@mui/material';
+import { Avatar, Card, CardContent, CardHeader, IconButton, Typography } from '@mui/material';
 import { DeleteOutlined } from '@mui/icons-material';
 import { yellow, green, pink, blue } from '@mui/material/colors';
 
